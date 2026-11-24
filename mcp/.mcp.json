@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "github": {
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp/",
+      "headers": { "Authorization": "Bearer ${GITHUB_PAT}" }
+    },
+    "linear": { "type": "http", "url": "https://mcp.linear.app/mcp" },
+    "notion": { "type": "http", "url": "https://mcp.notion.com/mcp" },
+    "sentry": { "type": "http", "url": "https://mcp.sentry.dev/mcp" },
+    "supabase": { "type": "http", "url": "https://mcp.supabase.com/mcp?read_only=true" },
+    "playwright": { "command": "npx", "args": ["@playwright/mcp@latest"] }
+  }
+}

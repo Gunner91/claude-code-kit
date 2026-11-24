@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "hooks": {
+    "SessionStart": [
+      { "matcher": "startup|resume", "hooks": [ { "type": "command", "command": "${CLAUDE_PROJECT_DIR}/.claude/hooks/session-context.sh" } ] }
+    ],
+    "UserPromptSubmit": [
+      { "hooks": [ { "type": "command", "command": "${CLAUDE_PROJECT_DIR}/.claude/hooks/prompt-secrets-guard.sh" } ] }
+    ],
+    "PreToolUse": [
+      { "matcher": "Bash", "hooks": [ { "type": "command", "command": "${CLAUDE_PROJECT_DIR}/.claude/hooks/block-dangerous.sh" } ] },
+      { "matcher": "Edit|Write", "hooks": [ { "type": "command", "command": "${CLAUDE_PROJECT_DIR}/.claude/hooks/protect-files.sh" } ] }
+    ],
+    "PostToolUse": [
+      { "matcher": "Edit|Write", "hooks": [ { "type": "command", "command": "${CLAUDE_PROJECT_DIR}/.claude/hooks/format-file.sh" } ] },
+      { "matcher": "Bash", "hooks": [ { "type": "command", "command": "${CLAUDE_PROJECT_DIR}/.claude/hooks/log-commands.sh" } ] }
+    ],
+    "Notification": [
+      { "matcher": "", "hooks": [
+        { "type": "command", "command": "${CLAUDE_PROJECT_DIR}/.claude/hooks/notify-desktop.sh" },
+        { "type": "command", "command": "${CLAUDE_PROJECT_DIR}/.claude/hooks/notify-telegram.sh" }
+      ] }
+    ],
+    "Stop": [
+      { "hooks": [
+        { "type": "command", "command": "${CLAUDE_PROJECT_DIR}/.claude/hooks/tests-before-stop.sh", "timeout": 300 },
+        { "type": "command", "command": "${CLAUDE_PROJECT_DIR}/.claude/hooks/notify-telegram.sh" }
+      ] }
+    ],
+    "PreCompact": [
+      { "hooks": [ { "type": "command", "command": "${CLAUDE_PROJECT_DIR}/.claude/hooks/backup-before-compact.sh" } ] }
+    ]
+  }
+}

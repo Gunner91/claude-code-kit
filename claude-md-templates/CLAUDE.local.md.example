@@ -1,0 +1,4 @@
+# Personal notes for this project (rename to CLAUDE.local.md, keep it out of git)
+- My local DB runs on port 5433, not 5432
+- I prefer short answers; explain only non-obvious decisions
+- Test account for the local app: see the README "Local setup" section

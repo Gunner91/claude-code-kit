@@ -1,6 +1,6 @@
 # Claude Code Kit
 
-Ready-to-use configuration for [Claude Code](https://code.claude.com/docs): **10 skills, 10 hooks, 8 subagents, MCP examples and a project starter** with safe permissions. Copy what you need into your project and adjust.
+Ready-to-use configuration for [Claude Code](https://code.claude.com/docs): **10 skills, 10 hooks, 8 subagents, CLAUDE.md templates, MCP examples and a project starter** with safe permissions. Copy what you need into your project and adjust.
 
 Maintained by [Vladyslav Koshelyev (KRIATIZ)](https://kriatiz.com/en/) — full-stack developer and AI engineer. Every folder links to a step-by-step guide (English, Ukrainian, Russian).
 
@@ -10,6 +10,7 @@ Maintained by [Vladyslav Koshelyev (KRIATIZ)](https://kriatiz.com/en/) — full-
 | [`skills/`](skills) | 10 skills: commit messages, tests, bug hunting, API docs, changelog, security check, SEO meta, landing copy, i18n, codebase onboarding | [How Claude Code skills work](https://kriatiz.com/en/blog/claude-code-skills/) |
 | [`hooks/`](hooks) | 10 hooks: block dangerous commands, protect `.env`, auto-format, audit log, desktop/Telegram notifications, secrets guard, tests before stop, backup before compaction | [Claude Code hooks guide](https://kriatiz.com/en/blog/claude-code-hooks/) |
 | [`subagents/`](subagents) | 8 subagents: code reviewer, debugger, test runner, security auditor, refactor planner, researcher, docs writer, copywriter | [Subagents guide](https://kriatiz.com/en/blog/claude-code-subagents/) |
+| [`claude-md-templates/`](claude-md-templates) | `CLAUDE.md` templates for a web app, a Python API and a PHP site, path-scoped `.claude/rules/` examples and a `CLAUDE.local.md` sample | [CLAUDE.md guide](https://kriatiz.com/en/blog/claude-code-claude-md/) |
 | [`mcp/`](mcp) | `.mcp.json` example (GitHub, Linear, Notion, Sentry, Supabase, Playwright) and a cheat sheet of `claude mcp` commands | [MCP servers guide](https://kriatiz.com/en/blog/claude-code-mcp/) |
 
 ## Quick start

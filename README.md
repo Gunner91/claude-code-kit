@@ -18,7 +18,8 @@ Maintained by [Vladyslav Koshelyev (KRIATIZ)](https://kriatiz.com/en/) — full-
 ```bash
 git clone https://github.com/Gunner91/claude-code-kit.git
 cp -r claude-code-kit/starter-kit/. your-project/        # starter config
-cp -r claude-code-kit/skills/write-tests your-project/.claude/skills/   # any single skill
+mkdir -p your-project/.claude/skills
+cp -rn claude-code-kit/skills/write-tests your-project/.claude/skills/   # any single skill; -n keeps your existing files
 chmod +x your-project/.claude/hooks/*.sh                 # macOS / Linux
 ```
 
